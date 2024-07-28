@@ -7,8 +7,20 @@ using System.Threading.Tasks;
 
 namespace EntityFrameWorkCoreExample
 {
-	internal class StudentContext : DbContext
+	public class StudentContext : DbContext
 	{
+        // ctor is contructor
+        public StudentContext()
+        {
+            
+        }
 
-	}
+        protected override void OnConfiguring(DbContextOptionsBuilder options)
+        {
+            // Database = the desired name for database
+            // Server = the server we are connecting too. LocalDB is included with VS
+            // Trusted_Connection - indicates that our windoes account should be used 
+            options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFCoreExample;Trusted_Connection=True;");
+        }
+    }
 }
