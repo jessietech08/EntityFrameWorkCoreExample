@@ -22,5 +22,7 @@ namespace EntityFrameWorkCoreExample
             // Trusted_Connection - indicates that our windoes account should be used 
             options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFCoreExample;Trusted_Connection=True;");
         }
+
+        public DbSet<Student> Students { get; set; }
     }
 }

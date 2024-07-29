@@ -9,7 +9,7 @@ namespace EntityFrameWorkCoreExample
 {
     public class Student
     {
-        [Key] // tell RF Core to make this primary key
+        [Key] // tell EF Core to make this primary key
         public int Id { get; set; }
 
         public string FullName { get; set; }
