@@ -9,7 +9,7 @@ namespace EntityFrameWorkCoreExample
 {
 	public class StudentContext : DbContext
 	{
-        // ctor is contructor
+        // ctor is constructor
         public StudentContext()
         {
             
@@ -19,10 +19,11 @@ namespace EntityFrameWorkCoreExample
         {
             // Database = the desired name for database
             // Server = the server we are connecting too. LocalDB is included with VS
-            // Trusted_Connection - indicates that our windoes account should be used 
+            // Trusted_Connection - indicates that our windows account should be used 
             options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=EFCoreExample;Trusted_Connection=True;");
         }
 
         public DbSet<Student> Students { get; set; }
     }
+
 }
